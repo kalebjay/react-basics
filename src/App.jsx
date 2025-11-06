@@ -1,28 +1,6 @@
-import conceptsImg from './assets/react-core-concepts.png';
-// dynamic and proper way to import images as opposed to down in 
-// the header as img src="./assets/react-core-concepts.png"
 import { CORE_CONCEPTS } from './data.js'; 
+import Header from './components/Header.jsx';
 
-const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
-
-function genRandomInt(max) {
-  return Math.floor(Math.random() * (max + 1));
-}
-
-function Header() {
-  const description = reactDescriptions[genRandomInt(2)];
-  
-  return (
-    <header>
-      <img src={conceptsImg} alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {description} React concepts you will need for almost any app you are
-        going to build!
-      </p>
-    </header>
-  );
-}
 
 /* Original way to declare function
 function CoreConcept(props) {
