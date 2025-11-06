@@ -1,28 +1,7 @@
 import { CORE_CONCEPTS } from './data.js'; 
 import Header from './components/Header.jsx';
+import CoreConcept from './components/CoreConcepts.jsx';
 
-
-/* Original way to declare function
-function CoreConcept(props) {
-  return (
-    <li>
-      <img src={props.image} alt={props.title} />
-      <h3>{props.title}</h3>
-      <p>{props.description}</p>
-    </li>
-  );
-}  */
-
-// new way using destructuring
-function CoreConcept({ title, description, image }) {
-  return (
-     <li>
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
-  );
-}
 
 function App() {
   return (
