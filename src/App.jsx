@@ -35,16 +35,26 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
-            {/* Original way, .notation */}
+            {/* Comparing manual way of dispaying array items
+            
+            Original way, .notation
             <CoreConcept
               title={CORE_CONCEPTS[0].title}
               description={CORE_CONCEPTS[0].description}
               image={CORE_CONCEPTS[0].image}
             />
             {/* New way, using destructuring */}
-            <CoreConcept {...CORE_CONCEPTS[1]} />
+            {/* <CoreConcept {...CORE_CONCEPTS[1]} />
             <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} /> */} 
+
+            {/* Better way instead of above examples.
+            Below is how to dynamically map each array item
+            and convert it to use JSX
+            */}
+            {CORE_CONCEPTS.map((concept) => (
+              <CoreConcept key={concept.title} {...concept} />
+            ))}
           </ul>
         </section>
         <section id="examples">
